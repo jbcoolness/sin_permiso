@@ -1,7 +1,7 @@
 require 'sinatra'
-require 'net/http'
+#require 'net/http'
 
 get '/'  do
-    request["permiso"] == 'soy-un-token-secreto' ? "Si lo logramos!" : "Sin Permiso"
+    request["HTTP_PERMISO"] == "soy-un-token-secreto" ? "Si lo logramos!" : "Sin Permiso"
     
 end
